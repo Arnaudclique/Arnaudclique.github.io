@@ -7,7 +7,11 @@
   margin-bottom: 40px;
 
   &__title {
-    margin: 30px 0 30px 0;
+    margin: 30px 0 30px 30px;
+
+    @media screen and (min-width: 1507px) {
+      margin: 30px 0 30px 0;
+    }
   }
 
   &__number-nav {
@@ -15,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: -10;
+    left: -10px;
     border: 1px solid $color-primary;
     background: $color-primary;
     color: whitesmoke;
@@ -26,11 +30,9 @@
 
   &__content {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: start;
     gap: 30px;
     margin-left: 30px;
+    align-items: center;
   }
 
   ul {
@@ -48,8 +50,19 @@
     border: 0px solid $color-primary;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    width: 350px;
-    height: 70px;
-    margin-bottom: 20px;
+    width: 300px;
+    height: 50px;
+    &:hover {
+      cursor: pointer;
+      background: rgba(170, 5, 170, 0.071);
+      color: rgba(170, 5, 170, 0.446);
+    }
+  }
+  a {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
